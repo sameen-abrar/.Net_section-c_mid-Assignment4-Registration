@@ -1,0 +1,21 @@
+﻿@model List<labtaskAssociation.db.cours>
+@{
+    ViewBag.Title = "preReg";
+}
+
+<h2>Pre Registration</h2>
+
+<form method="post" action="">
+    <ul>
+        @foreach (var i in Model)
+        {
+            if (i.courseStudents.Count < 40)
+            {
+                <li><input type="checkbox" name="courses[]" value="@i.id" />@i.name | @i.courseStudents.Count</li>
+            }
+
+        }
+    </ul>
+    <input type="hidden" value="@ViewBag.id" />
+    <input type="submit" value="submit" class="btn btn-info" />
+</form>

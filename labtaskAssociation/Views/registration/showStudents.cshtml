@@ -1,0 +1,39 @@
+﻿@{
+    //ViewBag.Title = "showStudents";
+}
+
+<h2>showStudents</h2>
+
+<p>
+    <a href="/registration/Insert">Add Student</a>
+    <h2>@TempData["error"]</h2>
+</p>
+<h3>@TempData["error"]</h3>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            CGPA
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.name
+            </td>
+            <td>
+                @item.cgpa
+            </td>
+            <td>
+                <a href="/registration/StudentEdit/@item.id">Edit</a> |
+                <a href="/registration/StudentDelete/@item.id">Delete</a> |
+                <a href="/registration/preReg/@item.id">Pre-Reg</a>
+            </td>
+        </tr>
+    }
+
+</table>

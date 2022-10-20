@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "StudentEdit";
+}
+
+<h2>StudentEdit</h2>
+
+<a href="/registration/Insert">Show Students</a>
+<a href="/registration/"></a>
+
+@if (Model == null)
+{
+    <h2>No student selected</h2>
+}
+else
+{
+    <form action="" method="post">
+        ID: <input type="number" name="id" value="@Model.id" class="form-control" readonly />
+        Student Name: <input type="text" name="name" value="@Model.name" placeholder="Enter Product name" class="form-control" />
+        Student CGPA: <input type="text" name="cgpa" value="@Model.cgpa" placeholder="Enter Product name" class="form-control" />
+        <input type="submit" value="Update Student" class="form-control" />
+    </form>
+}
+
+@*<div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@

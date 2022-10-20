@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StudentsDBModelStoreContainer" CdmEntityContainer="StudentsDBEntities2">
+    <EntitySetMapping Name="courseFaculties">
+      <EntityTypeMapping TypeName="StudentsDBModel.courseFaculty">
+        <MappingFragment StoreEntitySet="courseFaculty">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="facultyid" ColumnName="facultyid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courses">
+      <EntityTypeMapping TypeName="StudentsDBModel.cours">
+        <MappingFragment StoreEntitySet="courses">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="deptid" ColumnName="deptid" />
+          <ScalarProperty Name="PreReq" ColumnName="PreReq" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseStudents">
+      <EntityTypeMapping TypeName="StudentsDBModel.courseStudent">
+        <MappingFragment StoreEntitySet="courseStudent">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="studentid" ColumnName="studentid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="grade" ColumnName="grade" />
+          <ScalarProperty Name="marks" ColumnName="marks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="departments">
+      <EntityTypeMapping TypeName="StudentsDBModel.department">
+        <MappingFragment StoreEntitySet="departments">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="faculties">
+      <EntityTypeMapping TypeName="StudentsDBModel.faculty">
+        <MappingFragment StoreEntitySet="faculties">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="deptid" ColumnName="deptid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="students">
+      <EntityTypeMapping TypeName="StudentsDBModel.student">
+        <MappingFragment StoreEntitySet="students">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="cgpa" ColumnName="cgpa" />
+          <ScalarProperty Name="studentid" ColumnName="studentid" />
+          <ScalarProperty Name="deptid" ColumnName="deptid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "CourseEdit";
+}
+
+<h2>CourseEdit</h2>
+
+<a href="/registration/InsertCourse">Show Students</a>
+<a href="/registration/showCourse">Show Courses</a>
+
+@if (Model == null)
+{
+    <h2>No Course selected</h2>
+}
+else
+{
+    <form action="" method="post">
+        ID: <input type="number" name="id" value="@Model.id" class="form-control" readonly />
+        Course Name: <input type="text" name="name" value="@Model.name" placeholder="Enter Product name" class="form-control" />
+        Pre requisite: <input type="text" name="PreReq" value="@Model.PreReq" placeholder="Enter Product name" class="form-control" />
+        <input type="submit" value="Update Course" class="form-control" />
+    </form>
+}
+
